@@ -1,0 +1,14 @@
+{
+  "name": "streamflix-pro",
+  "version": "1.0.0",
+  "description": "Aplicación web IPTV/OTT premium conectada a Xtream Codes, desplegada en Cloudflare Pages + D1.",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler pages dev . --d1=DB=streamflix_db",
+    "deploy": "wrangler pages deploy .",
+    "db:init": "wrangler d1 execute streamflix_db --file=./schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}
